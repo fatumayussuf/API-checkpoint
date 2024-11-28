@@ -8,6 +8,7 @@ export default function UserList() {
     axios
       .get("https://jsonplaceholder.typicode.com/users")
       .then((response) => {
+        console.log("API Response:", response.data); // Debugging log
         setListOfUsers(response.data);
       })
       .catch((error) => {
